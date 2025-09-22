@@ -1,3 +1,5 @@
+package ru.ifellow.cars.parameters;
+
 public abstract class Car {
     private String model;
     private int year;
