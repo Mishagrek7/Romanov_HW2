@@ -1,3 +1,5 @@
+package ru.ifellow.cars.parameters;
+
 import java.util.List;
 
 public class CarUtils {

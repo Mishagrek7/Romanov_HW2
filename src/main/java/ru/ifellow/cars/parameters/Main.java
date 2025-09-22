@@ -1,8 +1,12 @@
+package ru.ifellow.cars.parameters;
+
+import ru.ifellow.cars.parameters.models.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    //it's Main origin
+    //it's ru.ifellow.cars.parameters.Main origin
     public static void main(String[] args) {
             List<Car> cars = new ArrayList<>();
 
