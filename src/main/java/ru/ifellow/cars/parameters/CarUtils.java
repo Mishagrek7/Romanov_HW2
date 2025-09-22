@@ -16,7 +16,7 @@ public class CarUtils {
 
     public static void changeGreenToRed(List<Car> cars) {
         for (Car car : cars) {
-            if ("зеленый".equalsIgnoreCase(car.getColor())) {
+            if ("зеленый".equalsIgnoreCase(car.getColor().trim())) {
                 car.changeColor("красный");
             }
         }
@@ -41,6 +41,14 @@ public class CarUtils {
     public static void printCarsByTransmission(List<Car> cars, String transmission) {
         for (Car car : cars) {
             if (car.getTransmission().equalsIgnoreCase(transmission)) {
+                System.out.println(car.getInfo());
+            }
+        }
+    }
+
+    public static void printCarsByManufacturer(List<Car> cars, String manufacturer) {
+        for (Car car : cars) {
+            if (car.getManufacturer().equalsIgnoreCase(manufacturer)) {
                 System.out.println(car.getInfo());
             }
         }
