@@ -14,7 +14,7 @@ public class Main {
             cars.add(new Lexus("LX", 2005, "автомат", "белый", 4.5,"бензин", "полный"));
             cars.add(new Mercedes("GLE", 2005, "автомат", "зеленый", 3.0,"дизель", "полный"));
             cars.add(new Porsche("Panamera", 2015, "автомат", "серый", 4.5,"бензин", "полный"));
-            cars.add(new Lada("Granta", 2012, "механика", "красный", 1.8,"бензин", "передний"));
+            cars.add(new Lada("Granta", 2012, "механика", "зеленый", 1.8,"бензин", "передний"));
             cars.add(new Toyota("Corolla", 2007, "механика", "синий", 1.6,"бензин", "передний"));
             cars.add(new Lexus("RX", 2019, "автомат", "зеленый", 1.8,"бензин", "полный"));
             cars.add(new Mercedes("GLS", 2004, "автомат", "белый", 5.5,"бензин", "полный"));
@@ -26,9 +26,9 @@ public class Main {
             System.out.println("Автомобили, выпущенные после 2006 года:");
             CarUtils.printRecentCars(cars);
 
-            CarUtils.changeGreenToRed(cars);
             System.out.println("\nПосле изменения цвета зеленых автомобилей на красный:");
-            CarUtils.printRecentCars(cars);
+            CarUtils.changeGreenToRed(cars);
+            cars.forEach(car -> System.out.println(car.getInfo()));
 
             System.out.println("\nАвтомобили с механической коробкой:");
             CarUtils.printCarsByTransmission(cars, "механика");
@@ -50,6 +50,11 @@ public class Main {
 
             System.out.println("\nАвтомобили с полным приводом:");
             CarUtils.printCarsByDrivee(cars, "полный");
+
+            System.out.println("\nАвтомобили из Японии:");
+            CarUtils.printCarsByManufacturer(cars, "Япония");
+
+
 
         }
     }
